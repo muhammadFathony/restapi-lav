@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/kontak', 'KontakController@index');
+Route::get('/kontak/{id}', 'KontakController@show');
+Route::post('/kontak/store', 'KontakController@store');
+Route::post('/kontak/update/{id}', 'KontakController@update');
+Route::post('/kontak/delete/{id}', 'KontakController@destroy');
